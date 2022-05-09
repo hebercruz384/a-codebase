@@ -2,3 +2,14 @@
   font-family: sans-serif;
   text-align: center;
 }
+.slotA {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+}
+.inner-slot {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
