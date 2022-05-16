@@ -1,7 +1,7 @@
 import "./styles.css";
 import { useState } from "react";
 
-export default function App() {
+function Slot() {
   const [playerTurn, changePlayerTurn] = useState("red");
   function togglePlayerTurn() {
     if (playerTurn === "red") {
@@ -10,12 +10,23 @@ export default function App() {
       changePlayerTurn("red");
     }
   }
+
+  var customclassName = "inner-slot " + playerTurn;
+  console.log(customclassName);
+  return (
+    <div className="slotA" onClick={togglePlayerTurn}>
+      <div className={customclassName}></div>
+    </div>
+  );
+}
+
+export default function App() {
   return (
     <div className="App">
-      <div className="slotA" onClick={togglePlayerTurn}>
-        <div className="inner-slot red yellow"></div>
-      </div>
-      <p>It is {playerTurn}'s turn</p>
+      <Slot />
+      <Slot />
+      <Slot />
+      <Slot />
     </div>
   );
 }
